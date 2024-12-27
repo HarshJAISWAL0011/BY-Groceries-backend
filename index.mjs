@@ -37,10 +37,11 @@ app.post('/user/:id',async (req,res)=>{
 })
 
 app.post('/userdetails',async (req,res)=>{
-    const {id,name }= req.params
+    const {id,name }= req.body
+    console.log(id,name)
       await setUserDetail(id,name)
      res.send("ok")
-})
+}) 
 
 
 app.post('/addtocart',async (req,res)=>{
